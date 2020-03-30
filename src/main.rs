@@ -20,4 +20,15 @@ fn main() {
     let s2 = s1;
     println!("{}", s2); // s1 is now invalid
 
+    // *Cloning* copies heap data
+    let s1 = String::from("hello");
+    let s2 = s1.clone();
+    println!("s1 = {}, s2 = {}", s1, s2);
+
+    // *Copying* copies only stack data if the size of the value is known at compile time
+    let x = 5;
+    let y = x;
+    println!("x = {}, y = {}", x, y);
+
+
 }
